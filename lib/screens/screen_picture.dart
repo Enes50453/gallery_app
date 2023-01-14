@@ -1,44 +1,7 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
+import 'package:gallery_app/images/images.dart';
 import 'package:gallery_app/main.dart';
 import 'package:gallery_app/screens/screen_main.dart';
-
-/*class ScreenPicture extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: GestureDetector(
-          onPanUpdate: ((details) {
-            if (details.delta.dx > 0) {}
-
-            ///swipe right
-            if (details.delta.dx > 0) {}
-
-            ///swipe left
-          }),
-          child: Container(
-            child: Image.network(
-              images[ScreenMain.selectedPictureIndex!],
-              fit: BoxFit.fill,
-            ),
-          ),
-        ),
-      ),
-      backgroundColor: Colors.black,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.pushNamed(context, "/gallery"),
-        tooltip: 'Back to gallery',
-        child: const Icon(
-          Icons.image,
-          color: Colors.grey,
-        ),
-        backgroundColor: Colors.deepPurple.shade700,
-      ),
-    );
-  }
-}*/
-//////////////////////////////////
-///
 
 class ScreenPicture extends StatefulWidget {
   @override
@@ -48,6 +11,7 @@ class ScreenPicture extends StatefulWidget {
 }
 
 class _ScreenPicture extends State {
+  //Images images = Images();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -72,7 +36,7 @@ class _ScreenPicture extends State {
         onPanUpdate: ((details) {
           if (details.delta.dx > 0) {
             setState(() {
-              if (ScreenMain.selectedPictureIndex! < images.length) {
+              if (ScreenMain.selectedPictureIndex! < Images.images!.length) {
                 ScreenMain.selectedPictureIndex =
                     ScreenMain.selectedPictureIndex! + 1;
                 showPicture();
@@ -92,7 +56,7 @@ class _ScreenPicture extends State {
                     ScreenMain.selectedPictureIndex! - 1;
                 showPicture();
               } else {
-                ScreenMain.selectedPictureIndex = images.length;
+                ScreenMain.selectedPictureIndex = Images.images!.length;
                 showPicture();
               }
               print("swiped left");
@@ -103,7 +67,7 @@ class _ScreenPicture extends State {
         }),
         child: Container(
           child: Image.network(
-            images[ScreenMain.selectedPictureIndex!],
+            Images.images![ScreenMain.selectedPictureIndex!],
             fit: BoxFit.fill,
           ),
         ),
@@ -111,3 +75,4 @@ class _ScreenPicture extends State {
     );
   }
 }
+*/

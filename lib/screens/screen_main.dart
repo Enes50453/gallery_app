@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app/main.dart';
+import 'package:gallery_app/images/images.dart';
+import 'package:swipe_image_gallery/swipe_image_gallery.dart';
 
 class ScreenMain extends StatelessWidget {
   static int? selectedPictureIndex = 5;
@@ -16,16 +18,9 @@ class ScreenMain extends StatelessWidget {
       ),
       body: GridView.count(
         crossAxisCount: 4,
-        children: _buildGrid(images.length, context),
+        children: _buildGrid(Images.images!.length, context),
         scrollDirection: Axis.horizontal,
       ),
-      /*GridView.extent(
-        maxCrossAxisExtent: 330.0,
-        mainAxisSpacing: 4.0,
-        crossAxisSpacing: 5.0,
-        padding: const EdgeInsets.all(5.0),
-        children: _buildGrid(20),
-      ),*/
     );
   }
 
@@ -34,13 +29,21 @@ class ScreenMain extends StatelessWidget {
         List<Container>.generate(imageNumber, (int index) {
       return Container(
         child: GestureDetector(
-          onTap: () {
+          /*onTap: () {
             selectedPictureIndex = index;
             Navigator.pushNamed(context, "/picture");
-          },
+          },*/
+          onTap: () => SwipeImageGallery(
+            initialIndex: index,
+            context: context,
+            itemBuilder: (context, index) {
+              return Image.network(Images.images![index]);
+            },
+            itemCount: Images.images!.length,
+          ).show(),
           child: Container(
               child: Image.network(
-            images[index],
+            Images.images![index],
             fit: BoxFit.fill,
           )),
         ),
