@@ -1,16 +1,17 @@
-# gallery_app
+# Gallery App
 
-A new Flutter project.
+This is a simpple gallery app, in this app;
+* You can display picture by swiping left and right,
+* You can click any picture to see it bigger.
+ While you display big picture;
+* You can swipe left or right for next or previous picture,
+* You can double-click on the big picture for zooming,
+* You can swipe up or down for go back to gallery.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss1.jpeg?raw=true)
+![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss2.jpeg?raw=true)
+![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss3.jpeg?raw=true)
+![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss4.jpeg?raw=true)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
