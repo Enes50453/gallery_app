@@ -4,7 +4,7 @@ import 'package:gallery_app/images/images.dart';
 import 'package:swipe_image_gallery/swipe_image_gallery.dart';
 
 class ScreenMain extends StatelessWidget {
-  static int? selectedPictureIndex = 5;
+  //static int? selectedPictureIndex = 5;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +41,7 @@ class ScreenMain extends StatelessWidget {
             },
             itemCount: Images.images!.length,
           ).show(),
+          
           child: Container(
               child: Image.network(
             Images.images![index],
