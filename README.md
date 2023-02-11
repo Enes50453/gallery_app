@@ -10,11 +10,6 @@ This is a simple gallery app, in this app;
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss1.jpeg?raw=true)
-![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss2.jpeg?raw=true)
-![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss3.jpeg?raw=true)
-![App Screenshot](https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss4.jpeg?raw=true)
-
 <table>
   <tr>
     <td><img src="https://github.com/Enes50453/gallery_app/blob/master/screenshots/ss1.jpeg" width=270 height=480></td>
