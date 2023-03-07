@@ -9,13 +9,13 @@ class ScreenMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          "GALLERY",
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Colors.deepPurple.shade700,
-      ),
+          centerTitle: true,
+          title: Text(
+            "GALLERY",
+            textAlign: TextAlign.center,
+          ),
+          backgroundColor: Colors.amber //Colors.deepPurple.shade700,
+          ),
       body: GridView.count(
         crossAxisCount: 4,
         children: _buildGrid(Images.images!.length, context),
@@ -41,7 +41,6 @@ class ScreenMain extends StatelessWidget {
             },
             itemCount: Images.images!.length,
           ).show(),
-          
           child: Container(
               child: Image.network(
             Images.images![index],
